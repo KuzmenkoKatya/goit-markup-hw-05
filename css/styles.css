@@ -96,7 +96,7 @@
     .header-site-auth .link:nth-last-child(2) {padding-right: 0px;}
 
   .header-site-nav .link.header-current 
-  {color: var(--accent-color);} 
+  {color: var(--accent-color);    position: relative;} 
 
   .header-site-auth .link {
     font-weight: 500;
@@ -136,14 +136,14 @@
                   color: var(--primary-text-color);
                   text-decoration: none;}
 
-.current {color: #2196f3; position: relative;}               
-.current::after
+/*.current {color: #2196f3; position: relative;} */              
+.header-current::after
 {content:"";
   width: 100%;
   height: 4px;
   border-radius: 2px;
   position: absolute;
-  background-color: orange;
+  background-color: #2196f3;
   left: 0;
   bottom: 0;}
   
@@ -480,8 +480,7 @@ background-size: cover;}
   justify-content: center;
   margin-bottom: 50px;}
   .gallery-nav .list{text-align: center;}    
-  .gallery-nav>li:nth-child(n + 2) {margin-left: 8px;}    
-  
+  .gallery-nav>li:nth-child(n + 2) {margin-left: 8px;}   
                                        
 .card-content {padding: 20px 24px;}   
 
@@ -494,12 +493,11 @@ background-size: cover;}
   margin-left: calc(-1 * 30px);
   margin-top: calc(-1 * 30px);}
 
+.gallery-photo {display: block;}
 .gallery > .list 
 {flex-basis: calc(100% / 3 - 30px);
   margin-left: 30px;
-  margin-top: 30px;
-  /*outline: #eeeeee 1px solid;*/}
-  
+  margin-top: 30px;} 
 
   .card-link:hover, .card-link:focus 
   {box-shadow: 
@@ -510,11 +508,26 @@ background-size: cover;}
 .section-projects {
   padding-top: 94px;
   padding-bottom: 94px;}
- 
-  /*.gallery>li:nth-child(3n + 1) {margin-left: 0;} 
-  .gallery>li:nth-last-child(-n + 3) {margin-bottom: 0;}*/
-  
 
-  /*ИКОНКИ*/
+.list-wrap {position: relative;}
+.list-wrap:hover .gallery-img-text {transform: translateY(0);}
+.gallery-img-text 
+ {position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  color: var(--sacondary-white-color);
+  font-weight: 400px;
+  line-height: 156%;
+  padding-top: 63px;
+  padding-left: 24px;
+  letter-spacing: 0.03em;
+  size: 18px;  
+  height: 294px;
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+  overflow: auto;}
+.gallery-tumb-wrap {position: relative; overflow: hidden;}
+
 
  
