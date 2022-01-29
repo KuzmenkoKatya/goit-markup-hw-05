@@ -79,7 +79,8 @@
   .header-site-auth .link:hover,
   .header-site-auth .link:focus,
   .futer-item .link:hover,
-  .futer-item .link:focus {color: var(--accent-color);}
+  .futer-item .link:focus {color: var(--accent-color);
+                            transform: var(--animation-timing);}
   
   .header-site-nav .link {
     font-weight: 500;
@@ -129,7 +130,8 @@
 .header-icon {fill: currentColor; margin-right: 10px;}
 
 .header-contacts:hover,.header-contacts:focus 
-{color: var(--accent-color);}
+{color: var(--accent-color);
+ transform: var(--animation-timing);}
 
 .header-contacts {align-items: center;
                   display: flex;
@@ -279,9 +281,10 @@ justify-content: center;
 align-items: center;}     
 
 .masters-social-link:hover, .masters-social-link:focus 
-{background-color: var(--accent-color);}
+{background-color: var(--accent-color); transform: var(--animation-timing)}
 .masters-social-link:hover .masters-social-icon,
-.masters-social-link:focus .masters-social-icon {fill: var(--sacondary-white-color);}
+.masters-social-link:focus .masters-social-icon 
+{fill: var(--sacondary-white-color); transform: var(--animation-timing)}
 
 .masters-social-list 
 {display: flex;
@@ -332,10 +335,10 @@ margin-top: 16px;}
   height: 92px;
   color: #afb1b8;}
   
- .client-link:hover ,
- .client-link:focus  {border-color: #2196f3;}
+ .client-link:hover , 
+ .client-link:focus  {border-color: #2196f3; transform: var(--animation-timing)}
   .client-link:hover .client-icon,
-  .client-link:focus .client-icon {fill: #2196f3;}
+  .client-link:focus .client-icon {fill: #2196f3; transform: var(--animation-timing)}
 
 .client-icon {  
   fill: currentColor; 
@@ -403,7 +406,8 @@ background-size: cover;}
     .footer-icon {fill: currentColor;}
     
     .footer-icon-link:hover,
-    .footer-icon-link:focus {background-color: var(--accent-color);}
+    .footer-icon-link:focus {background-color: var(--accent-color);
+                             transform: var(--animation-timing)}
     
 
 
@@ -420,11 +424,12 @@ background-size: cover;}
     border: 0;
     padding: 10px 32px;  }
     
-    .hero-button:hover {background-color:#188ce8;}
+    .hero-button:hover {background-color:#188ce8; transform: var(--animation-timing)}
 
     .sacondary-button:hover {
     color: var(--white-color);
-    background-color: var(--accent-color);}
+    background-color: var(--accent-color);
+    transform: var(--animation-timing)}
 
    .hero-primary-button {
     color: var(--white-color);
@@ -503,7 +508,8 @@ background-size: cover;}
   {box-shadow: 
     0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),                                       
-    1px 4px 6px rgba(0, 0, 0, 0.16);}
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+    transform: var(--animation-timing)}
  
 .section-projects {
   padding-top: 94px;
@@ -511,7 +517,9 @@ background-size: cover;}
 
 /*анимация наплыва текста на карточку*/
 .list-wrap {position: relative;}
-.list-wrap:hover .gallery-img-text {transform: translateY(0);}
+.list-wrap:hover .gallery-img-text 
+{transform: translateY(0);
+ transform: var(--animation-timing)}
 .gallery-img-text 
  {position: absolute;
   top: 0;
@@ -528,6 +536,46 @@ background-size: cover;}
   transition: transform var(--animation-timing);
   overflow: auto;}
 .gallery-tumb-wrap {position: relative; overflow: hidden;}
+
+/*МОДАЛЬНОЕ ОКНО*/
+.backdrop
+{position: fixed;
+ top: 0;  
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ transition: opasity 250ms, visibility 250ms;}
+
+.backdrop.is-hidden .modal {transform: scale(0.5);}
+
+.modal 
+ {width: 500px;
+  min-height: 500px;
+  border-color: var(--sacondary-white-color);
+  border-radius: 4px;
+  transition: transform 250ms;
+  transform: scale(1);}
+
+.modal-close 
+{display: flex;
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ border: 1px solid rgba(0, 0, 0, 0.1);
+ background-color: var(--sacondary-white-color);
+ align-items: center;
+ justify-content: center;
+ position: absolute;
+ top: 8px;
+ right: 8px;}
+
+.is-hidden 
+{opacity: 0;
+pointer-events: none;
+visibility: hidden;}
+
 
 
  
