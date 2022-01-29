@@ -281,10 +281,10 @@ justify-content: center;
 align-items: center;}     
 
 .masters-social-link:hover, .masters-social-link:focus 
-{background-color: var(--accent-color); transform: var(--animation-timing)}
+{background-color: var(--accent-color); transform: var(--animation-timing);}
 .masters-social-link:hover .masters-social-icon,
 .masters-social-link:focus .masters-social-icon 
-{fill: var(--sacondary-white-color); transform: var(--animation-timing)}
+{fill: var(--sacondary-white-color); transform: var(--animation-timing);}
 
 .masters-social-list 
 {display: flex;
@@ -336,9 +336,9 @@ margin-top: 16px;}
   color: #afb1b8;}
   
  .client-link:hover , 
- .client-link:focus  {border-color: #2196f3; transform: var(--animation-timing)}
+ .client-link:focus  {border-color: #2196f3; transform: var(--animation-timing);}
   .client-link:hover .client-icon,
-  .client-link:focus .client-icon {fill: #2196f3; transform: var(--animation-timing)}
+  .client-link:focus .client-icon {fill: #2196f3; transform: var(--animation-timing);}
 
 .client-icon {  
   fill: currentColor; 
@@ -407,7 +407,7 @@ background-size: cover;}
     
     .footer-icon-link:hover,
     .footer-icon-link:focus {background-color: var(--accent-color);
-                             transform: var(--animation-timing)}
+                             transform: var(--animation-timing);}
     
 
 
@@ -424,7 +424,7 @@ background-size: cover;}
     border: 0;
     padding: 10px 32px;  }
     
-    .hero-button:hover {background-color:#188ce8; transform: var(--animation-timing)}
+    .hero-button:hover {background-color:#188ce8; transform: var(--animation-timing);}
 
     .sacondary-button:hover {
     color: var(--white-color);
@@ -509,7 +509,7 @@ background-size: cover;}
     0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),                                       
     1px 4px 6px rgba(0, 0, 0, 0.16);
-    transform: var(--animation-timing)}
+    transform: var(--animation-timing);}
  
 .section-projects {
   padding-top: 94px;
@@ -519,7 +519,7 @@ background-size: cover;}
 .list-wrap {position: relative;}
 .list-wrap:hover .gallery-img-text 
 {transform: translateY(0);
- transform: var(--animation-timing)}
+ transform: var(--animation-timing);}
 .gallery-img-text 
  {position: absolute;
   top: 0;
@@ -540,26 +540,30 @@ background-size: cover;}
 /*МОДАЛЬНОЕ ОКНО*/
 .backdrop
 {position: fixed;
- top: 0;  
+ top: 0; 
+ left: 0; 
  width: 100vw;
  height: 100vh;
  background-color: rgba(0, 0, 0, 0.2);
- display: flex;
+ /*display: flex;
  align-items: center;
- justify-content: center;
+ justify-content: center;*/
  transition: opacity 250ms, visibility 250ms;}
 
 .backdrop.is-hidden .modal {transform: scale(0.5);}
 
 .modal 
- {width: 500px;
-  min-height: 500px;
-  border-color: var(--sacondary-white-color);
-  border-radius: 4px;
-  transition: transform 250ms;
-  transform: scale(1);}
+ {position: absolute;
+  top: 50%;
+  left: 50%;  
+  transform: translate(-50%, -50%);
+  width: 528px;
+  min-height: 581px;
+  background-color: var(--sacondary-white-color);
+  border-radius: 4px;   
+  transition: transform var(--animation-timing);}
 
-/*.modal-close 
+.modal-close 
 {position: absolute;
  display: flex;
  width: 30px;
@@ -572,10 +576,10 @@ background-size: cover;}
  top: 8px;
  right: 8px;}
 
-.is-hidden 
+/*.backdrop.is-hidden 
 {opacity: 0;
 pointer-events: none;
-visibility: hidden;}*/
+visibility: hidden;}
 
 
 
