@@ -245,8 +245,17 @@
     align-items: center;
     justify-content:center;
     min-height:70px;
-    background: rgba(47, 48, 58, 0.8);
-  }
+    background: rgba(47, 48, 58, 0.8);}
+
+.label-title 
+{color: var(--sacondary-white-color);  
+  font-weight: bold;
+  line-height: 0.87;
+  padding-top: 27px;  padding-bottom: 27px;  
+  letter-spacing: 0.03em;  
+  font-size: 14px; 
+  text-transform: uppercase;
+}
 
 /* Наша команда */
 
