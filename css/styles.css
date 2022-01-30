@@ -545,18 +545,18 @@ background-size: cover;}
  width: 100vw;
  height: 100vh;
  background-color: rgba(0, 0, 0, 0.2);
- /*display: flex;
+ display: flex;
  align-items: center;
- justify-content: center;*/
+ justify-content: center;
  transition: opacity 250ms, visibility 250ms;}
 
 .backdrop.is-hidden .modal {transform: scale(0.5);}
 
 .modal 
- {position: absolute;
+ {/*position: absolute;
   top: 50%;
   left: 50%;  
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);*/
   width: 528px;
   min-height: 581px;
   background-color: var(--sacondary-white-color);
@@ -576,7 +576,7 @@ background-size: cover;}
  top: 8px;
  right: 8px;}
 
-/*.backdrop.is-hidden 
+ .is-hidden 
 {opacity: 0;
 pointer-events: none;
 visibility: hidden;}
