@@ -539,47 +539,32 @@ background-size: cover;}
 
 /*МОДАЛЬНОЕ ОКНО*/
 .backdrop
-{position: fixed;
- top: 0; 
- left: 0; 
- width: 100vw;
- height: 100vh;
+{position: fixed; top: 0;  left: 0; width: 100vw; height: 100vh;
  background-color: rgba(0, 0, 0, 0.2);
- display: flex;
- align-items: center;
- justify-content: center;
+ display: flex; align-items: center; justify-content: center;
  transition: opacity 250ms, visibility 250ms;}
-
-.backdrop.is-hidden .modal {transform: scale(0.5);}
-
+.backdrop.is-hidden .modal {transform: scale(0.1);}
 .modal 
- {/*position: absolute;
-  top: 50%;
-  left: 50%;  
-  transform: translate(-50%, -50%);*/
-  width: 528px;
-  min-height: 581px;
+ {/*position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);*/
+  width: 528px; min-height: 581px;
   background-color: var(--sacondary-white-color);
   border-radius: 4px;   
-  transition: transform var(--animation-timing);}
-
+  transition: transform var(--animation-timing); transform: scale(1);
+  animation-name: spin; animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-iteration-count: 1;}
+@keyframes spin {0% { transform: rotate(0deg) scale(0.1);}
+                 50% { transform: rotate(180deg) scale(0.3);}
+                 100% { transform: rotate(360deg) scale(1); }}
 .modal-close 
-{position: absolute;
- display: flex;
- width: 30px;
- height: 30px;
- border-radius: 50%;
- border: 1px solid rgba(0, 0, 0, 0.1);
+{position: absolute; display: flex;
+ width: 30px; height: 30px;
+ border-radius: 50%; border: 1px solid rgba(0, 0, 0, 0.1);
  background-color: var(--sacondary-white-color);
- align-items: center;
- justify-content: center; 
- top: 8px;
- right: 8px;}
-
+ align-items: center; justify-content: center; 
+ top: 8px; right: 8px;}
  .is-hidden 
-{opacity: 0;
-pointer-events: none;
-visibility: hidden;}
+{opacity: 0; pointer-events: none; visibility: hidden;}
 
 
 
