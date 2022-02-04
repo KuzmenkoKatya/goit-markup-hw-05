@@ -544,7 +544,7 @@ background-size: cover;}
 
 /*анимация наплыва текста на карточку*/
 .list-wrap {position: relative;}
-.card-link-hover .gallery-img-text 
+.card-link:hover .gallery-img-text 
 {transform: translateY(0);}
 .gallery-img-text 
  {position: absolute;
@@ -559,7 +559,7 @@ background-size: cover;}
   font-size: 18px;  
   height: 294px;  
   transform: translateY(101%);
-  transition: transform var(--animation-timing); }
+ transition: transform var(--animation-timing);}
 .gallery-tumb-wrap {position: relative; overflow: hidden;}
 
 /*МОДАЛЬНОЕ ОКНО*/
